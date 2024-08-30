@@ -2,7 +2,7 @@ import streamlit as st
 import ai_search_phase_III.semantic_search_module as asm
 import pandas as pd
 
-st.title(":blue[Welcome to AI Search - phase II] :sunglasses:")
+st.title(":blue[Welcome to AI Search - phase III] :sunglasses:")
 search_text = st.text_input("Enter your search query:")
 
 #pass the search text to our search module
@@ -23,7 +23,7 @@ if (len(search_text) != 0):
             
         # Convert subset dataframe to html to display document file as
         # link
-        st.columns( [1, 1, 1, 3, 1] )
+        st.columns([1, 1, 1, 4, 0.25])
         st.markdown(subset_df.to_html(escape=False), unsafe_allow_html=True)
 
 
