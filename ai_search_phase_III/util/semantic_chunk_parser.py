@@ -63,7 +63,6 @@ def chunk_data_in_semantic_pattern(url : str,
     print(f"{file_obj}")
     paragraphs = file_util.convert_to_chunks(file_obj)
 
-    # paragraphs = return_list()
     print(f"{len(paragraphs)}")
 
     # Embed each paragraph and add it numpy array into 2D array using list
