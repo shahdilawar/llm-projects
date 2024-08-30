@@ -27,12 +27,9 @@ data_dir = "./ai_search_phase_III"
 """
 def build_sqlite_data_store(url : str):
     
-    print("1")
     file_obj = file_util.download_file(url, "text")
-    print("2")
-    # Convert to chunks into list of paragraphs
-    # chunk_list = file_util.convert_to_chunks(file_obj)
 
+    # Convert to chunks into list of paragraphs
     chunk_list = sc.chunk_data_in_semantic_pattern(url,
                                                      file_obj)
     print(f"{len(chunk_list)}")
