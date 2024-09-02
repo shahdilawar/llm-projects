@@ -15,7 +15,7 @@ from util import sqlite_util as sqlite_util
 MODEL =  "msmarco-distilbert-base-v4"
 MODEL_1 = "BAAI/bge-large-zh-v1.5"
 MODEL_2 = "paraphrase-MiniLM-L6-v2"
-embedder = SentenceTransformer(MODEL_1, device="cpu")
+embedder = SentenceTransformer(MODEL_1)
 
 #URL of the book from project gutenberg
 url = "https://www.gutenberg.org/cache/epub/100/pg100.txt"

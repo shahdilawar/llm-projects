@@ -3,7 +3,6 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 import numpy as np
 from util import file_util as file_util
-from util import search_corpus_module as sc
 
 #initialize the embeddings model.
 MODEL = "all-MiniLM-L6-v2"
@@ -15,7 +14,7 @@ MODEL_4 = "distiluse-base-multilingual-cased-v1"
 MODEL_1 = "BAAI/bge-large-zh-v1.5"
 # Lightweight for CPU
 MODEL_5 = "paraphrase-MiniLM-L6-v2" 
-similarity_embeddings = SentenceTransformer(MODEL_1, device="cpu")
+similarity_embeddings = SentenceTransformer(MODEL_1)
 
 # initialize similarity score to be 0.6
 BENCHMARK_SIMILARITY_SCORE =  0.6
