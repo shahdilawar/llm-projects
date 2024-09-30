@@ -41,23 +41,7 @@ AI Hybrid Search is a Python-based project that combines semantic search and key
 ## Project Structure
 
 ```
-ai-hybrid-search/
-│
-├── util/
-│   ├── file_util.py
-│   ├── sqlite_util.py
-│   └── semantic_chunk_parser.py
-│
-├── combined_search.py
-├── home.py
-├── hybrid_search_module.py
-├── index_builder_pipeline.py
-├── keyword_search_module.py
-├── semantic_search.py
-├── search_corpus_module.py
-│
-├── requirements.txt
-└── README.md
+![alt text](<Screenshot 2024-09-30 at 11.40.36 AM.png>)
 ```
 
 ## Usage
@@ -127,6 +111,4 @@ For a complete list of dependencies, please refer to the `requirements.txt` file
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License
 
-This project is licensed under the MIT License.
