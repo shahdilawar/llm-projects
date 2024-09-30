@@ -15,12 +15,14 @@ class HybridSearchModule:
 
     '''
     *   Function that takes in the query string as input.
-    *   retrieves search corpus embeddings 
+    *   retrieves re-ranked search results using cross encoder.
     '''
     def display_hybrid_search_results(self, query_str : str) -> pd.DataFrame:
  
         cs = CombinedSearchModule()
-        # Compare the query with search corpus using cosine similarities method
+        # Compare the query against the search candidate documents of 
+        # semantic search and keyword search. Cross encoder is used to
+        # re-rank the results.
         search_results = cs.combined_search_results(query_str)
 
         return search_results
@@ -28,7 +30,7 @@ class HybridSearchModule:
 
     '''
     *   Function that takes in the query string as input.
-    *   retrieves search corpus embeddings 
+    *   retrieves semantic search results. 
     '''
     def display_semantic_search_results(self, query_str : str) -> pd.DataFrame:
  
@@ -64,7 +66,7 @@ class HybridSearchModule:
 
     '''
     *   Function that takes in the query string as input.
-    *   retrieves search corpus embeddings 
+    *   retrieves keyword search results. 
     '''
     def display_keyword_search_results(self, query_str : str) -> pd.DataFrame:
         

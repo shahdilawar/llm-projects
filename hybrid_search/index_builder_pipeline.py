@@ -76,6 +76,25 @@ class IndexBuilderPipeline:
             logger.error( f"Database connection error : {ce}" )
         except Exception as e:
             logger.error( f"Exception occured as : {e}" )
+
+    '''
+    * function to build the keyword index.
+    * retrieves the sem chunks and pass it on to the KeywordSearchModule
+    * class to build the index.
+    '''
+    def build_keyword_index(self):
+        ksm = KeywordSearchModule()
+        collated_list = []
+        logger.info(f" sem chunks length is : {len(self.sem_chunks)}")
+
+        [collated_list.extend(sem_chunk) for sem_chunk in self.sem_chunks]
+        logger.info(f"Collated sem chunks length is : {len(collated_list)}")
+
+        ksm.retrieve_corpus(collated_list)
+        built_index = ksm.build_index()
+        logger.info("index has been built")
+
+
     
     """
     * function to build the local datastore that contains chunk_id,

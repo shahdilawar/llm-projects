@@ -13,16 +13,16 @@ class KeywordSearchModule:
     corpus = []
     stemmer = Stemmer.Stemmer("english")
 
-    # optional: create a stemmer
-
+    '''
+    * function that receives the chunks and saves it to its corpus.
+    '''
     def retrieve_corpus(self, chunks : list):
-        # # Iterate through folder structure and build the brute force chunks.
-        # file_list = file_util.iterate_folder()
-        # for file_obj in file_list:
-        #     #retrieve brute force chunks.
-        #     self.corpus.extend(file_util.convert_to_chunks(file_obj))
         self.corpus = chunks
     
+    '''
+    * function that builds the keyword index based on the corpus, stopwords and stemmer passed in.
+    * The index is saved to the pickle file.
+    '''
     def build_index(self) -> bm25s.BM25:
 
         # Tokenize the corpus and only keep the ids (faster and saves memory)
@@ -35,7 +35,10 @@ class KeywordSearchModule:
         retriever.save("./llm-projects/pickle_data/keyword_search_index.pkl",
                                                              corpus=self.corpus)
         return retriever
-
+    
+    '''
+    * Search function that matches the query against the built keyword index.
+    '''
     def search_keyword_results(self, query : str) -> tuple:
 
         #load the index
