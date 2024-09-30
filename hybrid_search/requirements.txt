@@ -1,0 +1,36 @@
+# Web Framework
+streamlit
+
+# Data Processing and Analysis
+pandas
+numpy
+
+# Natural Language Processing
+sentence-transformers
+tika
+PyStemmer
+
+# Machine Learning
+torch
+scikit-learn
+
+# Database
+sqlite3
+
+# BM25 Search
+bm25s
+
+# HTTP Requests
+requests
+
+# Compression
+gzip
+
+# Logging
+loguru
+
+# File and Path handling
+pathlib
+
+# Data Serialization
+pickle
