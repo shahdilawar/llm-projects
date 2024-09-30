@@ -1,3 +1,5 @@
+# semantic_chunk_parser.py
+
 from sentence_transformers import SentenceTransformer, util
 from sklearn.metrics.pairwise import cosine_similarity
 
