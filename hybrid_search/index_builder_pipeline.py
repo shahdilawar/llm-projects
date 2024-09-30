@@ -36,6 +36,9 @@ class IndexBuilderPipeline:
     '''
     * Below function is the index builder that builds semantic and 
     * key word indexes
+    * Below function builds the semantic dense vector embeddings index 
+    * and saves to sql lite vector and pickle file.
+    * It also builds the keyword index and saves to pickle storage.
     '''
     def build_cumulative_indexes(self):
         #call the semantic index builder
@@ -44,11 +47,8 @@ class IndexBuilderPipeline:
         self.build_keyword_index()
 
     '''
-    * Below function is the index builder that builds semantic and 
-    * key word indexes
     * Below function builds the semantic dense vector embeddings index 
     * and saves to sql lite vector and pickle file.
-    * It also builds the keyword index and saves to pickle storage..
     '''
     def build_semantic_index(self):
         #initialize semantic chunker object
@@ -80,7 +80,7 @@ class IndexBuilderPipeline:
     '''
     * function to build the keyword index.
     * retrieves the sem chunks and pass it on to the KeywordSearchModule
-    * class to build the index.
+    * class to build the index and saves to pickle storage.
     '''
     def build_keyword_index(self):
         ksm = KeywordSearchModule()
@@ -93,7 +93,6 @@ class IndexBuilderPipeline:
         ksm.retrieve_corpus(collated_list)
         built_index = ksm.build_index()
         logger.info("index has been built")
-
 
     
     """
