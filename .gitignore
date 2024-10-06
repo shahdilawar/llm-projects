@@ -12,3 +12,11 @@ hybrid_search/db/semantic_search.db
 ai_search_phase_III/ai_search_phase_III/data/embeddings.pkl
 *.pkl
 *.db
+ai_search_phase_III/data/embeddings.pkl
+hybrid_search/pickle_data/embeddings.pkl
+ai_search_phase_III/ai_search_phase_III/data/semantic_search.db
+ai_search_phase_III/data/semantic_search.db
+hybrid_search/db/semantic_search.db
+ai_search_phase_III/ai_search_phase_III/data/embeddings.pkl
+*.pkl
+*.db
