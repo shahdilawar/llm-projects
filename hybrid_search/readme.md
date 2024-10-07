@@ -41,7 +41,7 @@ AI Hybrid Search is a Python-based project that combines semantic search and key
 ## Project Structure
 
 ```
-![alt text](<Screenshot 2024-09-30 at 11.40.36 AM.png>)
+![alt text](<llm-projects/hybrid_search/images/proj_arch.png>)
 ```
 
 ## Usage
